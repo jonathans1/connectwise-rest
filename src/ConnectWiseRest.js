@@ -22,7 +22,7 @@
 /**
  *
  * @param {CWOptions} options
- * @returns {{API: (ConnectWise), FinanceAPI: (FinanceAPI), ServiceDeskAPI: (ServiceDeskAPI), TimeAPI: (TimeAPI)}}
+ * @returns {{API: (ConnectWise), FinanceAPI: (FinanceAPI), ServiceDeskAPI: (ServiceDeskAPI), CompanyAPI: (CompanyAPI), TimeAPI: (TimeAPI)}}
  * @constructor
  */
 function ConnectWiseRest(options) {
@@ -30,6 +30,7 @@ function ConnectWiseRest(options) {
         _FinanceAPI = require('./FinanceAPI'),
         _TimeAPI = require('./TimeAPI'),
         _ServiceDeskAPI = require('./ServiceDeskAPI'),
+        _CompanyAPI = require('./CompanyAPI'),
         _ProjectAPI = require('./ProjectAPI');
 
 
@@ -37,6 +38,7 @@ function ConnectWiseRest(options) {
         API: new _ConnectWise(options),
         FinanceAPI: new _FinanceAPI(options),
         ServiceDeskAPI: new _ServiceDeskAPI(options),
+        CompanyAPI: new _CompanyAPI(options),
         TimeAPI: new _TimeAPI(options),
         ProjectAPI: new _ProjectAPI(options)
     }
